@@ -8,12 +8,13 @@ public class tictactoegui extends JFrame{
     tictactoe controls = new tictactoe();
     public JFrame mainFrame;
     public JButton buttons[] = new JButton[9];
-
+    //#region gui
     public tictactoegui(){
         boolean isChecked = false;
+        //fills up button array and sets the text to numbers
         for(int i = 0; i < buttons.length; i++) {
             isChecked = !isChecked;
-            buttons[i] = new JButton(Integer.toString(i));
+            buttons[i] = new JButton(Integer.toString(i+1));
             buttons[i].setFocusPainted(false);
             buttons[i].setBorderPainted(false);
             if(isChecked)buttons[i].setBackground(new Color(0,0,0));
@@ -36,4 +37,5 @@ public class tictactoegui extends JFrame{
         }
         mainFrame.setVisible(true);
     }
+    //#endregion
 }
